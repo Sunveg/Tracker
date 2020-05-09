@@ -1,0 +1,351 @@
+#home{
+    margin-top: 100px;
+   
+}
+
+nav{
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+nav , #stats ,#helplines {
+  font-family: 'Indie Flower', cursive;
+  font-family: 'Arvo', serif;
+}
+
+
+.active{
+  color: floralwhite;
+}
+
+
+@keyframes slide-up {
+    from{
+        margin-top: 100vh;
+    }
+    to{
+        margin-top: 100px;
+    }
+}
+
+#home{
+    animation: slide-up ease-in-out 3s forwards;
+}
+
+#active{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+/* #cure-total{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+} */
+
+
+ .active-cases,.cured-cases,.total-cases{
+     width: 350px;
+     height: 250px;
+     border-radius: 10px;
+     margin: 0px 5px 0px 5px;
+ }
+
+ #total-cases , #total-cases-india{
+    color: rgb(0, 0, 255);
+ }
+
+ #recovered ,#recovered-india{
+    color: green;
+
+ }
+
+ #deaths , #deaths-india{
+    color: red;
+
+ }
+ 
+
+
+.card-title{
+    color: rgb(1, 1, 114);
+}
+
+
+
+.logo{
+    height: 60px;
+    width: 120px;
+    border-radius: 10px;
+}
+
+  .ml7 {
+    position: relative;
+    font-weight: 900;
+    font-size: 2.8em;
+  }
+  .ml7 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+    color: rgb(17, 29, 192);
+  }
+  .ml7 .letter {
+    transform-origin: 0 100%;
+    display: inline-block;
+    line-height: 1em;
+  }
+
+  .ml8 {
+    position: relative;
+    font-weight: 900;
+    font-size: 2.8em;
+  }
+  .ml8 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+    color: rgb(48, 14, 80);
+  }
+  .ml8 .letter {
+    transform-origin: 0 100%;
+    display: inline-block;
+    line-height: 1em;
+  }
+
+  .ml9 {
+    position: relative;
+    font-weight: 900;
+    font-size: 2.8em;
+  }
+  .ml9 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+    color: rgb(17, 29, 192);
+  }
+  .ml9 .letter {
+    transform-origin: 0 100%;
+    display: inline-block;
+    line-height: 1em;
+  }
+  .ml10 {
+    position: relative;
+    font-weight: 900;
+    font-size: 2.8em;
+  }
+  .ml10 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+    color: rgb(185, 0, 0);
+    
+  }
+  .ml10 .letter {
+    transform-origin: 0 100%;
+    display: inline-block;
+    line-height: 1em;
+  }
+/* ------------------------ */
+table {
+    font-family: 'Indie Flower', cursive;
+    font-family: 'Arvo', serif;
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    overflow-x:auto;
+  }
+  
+  #showtable td, #showtable th {
+    /* border: 1px solid #797979; */
+    text-align: center;
+    padding: 8px;
+  }
+  
+  #showtable tr:nth-child(odd) {
+    background-color: #f8f6ff;
+  }
+
+  #showtable tr:nth-child(even) {
+    background-color: white;
+  }
+
+  #showtable tr:nth-child(1) {
+    background-color: #6c7ae0;
+    color: floralwhite;
+  }
+
+  #showtable tr:nth-child(2) {
+    background-color: rgb(242, 248, 191);
+  }
+
+  #showtable tr:hover {background-color: rgb(180, 181, 255)}
+
+  .btn {
+      border: 1px solid black;
+  }
+
+  #chartindia,#chartglobal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+
+  @media screen and (max-width: 770px) {
+    #chart,#chart2{
+      height: 300px;
+      width: 500px;
+    }
+  }
+
+/*  coursel  */
+.carousel {
+  color: black;
+  background-color: black;
+}
+.carousel-item {
+  height: 200px;
+}
+
+
+@media screen and (max-width: 600px) {
+  .carousel-item {
+    height: 200px;
+  }
+}
+
+.carousel-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 300px;
+}
+
+#carouselButton {
+  right: 0px;
+  position: absolute;
+  bottom: 0px;
+  z-index: 1;
+}
+
+
+
+#icon {
+    
+  font-size: 80px;
+  
+} 
+
+.fa-whatsapp{
+/* color: floralwhite;
+background-color: #25D366; */
+}
+
+.fa-whatsapp:hover{
+/* color: floralwhite;
+background-color: rgb(24, 128, 62); */
+}
+
+.fa-instagram{
+/* color: floralwhite;
+background-color:  #3f729b; */
+}
+
+/* .fa-instagram:hover{
+color: floralwhite;
+background-color:  #294a64; 
+}*/
+
+#icon:hover{
+animation: incr 0.1s ease-in-out forwards;
+}
+
+@keyframes incr {
+from{
+  font-size: 80px;
+}
+to{
+  font-size: 100px;
+}
+}
+
+
+
+.card{
+  margin: 50px;
+}
+
+
+.card:hover{
+  animation: raise 0.1s ease-in-out forwards;
+}
+
+@keyframes raise {
+  from{
+    margin: 50px;
+  }
+  to{
+    margin: 0px 30px 0px 30px;
+  }
+  }
+
+
+
+
+
+
+
+/* 
+
+@media only screen and (max-width: 576px) {
+  #anime{
+    height: 350px;
+    width: 350px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #anime{
+    height: 100px;
+    width: 100px;
+  }
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+  #anime{
+    height: 10px;
+    width: 10px;
+  }
+}
+
+@media only screen and (max-width: 2000px) {
+  #anime{
+    height: 200px;
+    width: 200px;
+  }
+} */

@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Covid Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Indie+Flower&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arvo&family=Fira+Sans+Condensed:wght@300;400&family=Indie+Flower&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@423&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <nav class="navbar navbar-expand-lg navbar-dark  fixed-top" style="opacity: 0.95;">
+        <a class="navbar-brand" href="index.html"> <img src="logo.jpg" alt="Covid19" class="img-fluid logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item" id="st">
+                    <a class="nav-link" href="#stats" title="Statistics">Stats</a>
+                </li>
+                <li class="nav-item" id="sym">
+                    <a class="nav-link" href="#symptoms" title="Preventions">Symptoms</a>
+                </li>
+                <li class="nav-item" id="prev">
+                    <a class="nav-link" href="#preventions" title="Do's and Don'ts">Prevention</a>
+                </li>
+                <li class="nav-item" id="hlp">
+                    <a class="nav-link" href="#helplines" title="AboutUs">HelpLine</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+    <div id="home">
+        <div class="row">
+            <div class="col-10 col-sm-8 col-md-8 offset-sm-2 offset-1 p-0 my-0">
+                <div id="mycarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner " role="listbox">
+                        <div class="carousel-item active">
+                            <!-- <img class="d-block img-fluid" src="logo.jpg" alt="Logo" class="img-fluid"
+                                style="width: 300px;height: 200px;"> -->
+                            <div class="carousel-caption d-md-block ">
+                                <strong>
+                                    <h1 style="color: rgb(108, 255, 108);font-weight: bolder;">Stay Home
+                                        Stay Safe </h1>
+                                </strong>
+                                <strong>
+                                    <h3 style="color: rgb(255, 255, 255);">#LetsFightTogether</h3>
+                                </strong>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <!-- <img class="d-block img-fluid" src="stayHome.jpg" alt="stayHome" class="img-fluid"
+                                style="width: 300px;height: 200px;"> -->
+                            <div class="carousel-caption  d-md-block ">
+                                <strong>
+                                    <h1 style="color: rgb(108, 255, 108);font-weight: bolder;">
+                                        #FightCorona </h1>
+                                </strong>
+                                <strong>
+                                    <h3 style="color: rgb(255, 255, 255);">Join The Fight </h3>
+                                </strong>
+                            </div>
+
+                        </div>
+                        <div class="carousel-item">
+                            <!-- <img class="d-block img-fluid" src="Lockdown2.jpg" alt="Salute" class="img-fluid"
+                                style="width: 300px;height: 200px;"> -->
+                            <div class="carousel-caption  d-md-block ">
+                                <strong>
+                                    <h1 style="color: rgb(108, 255, 108);font-weight: bolder;">
+                                        #SaluteFighters</h1>
+                                </strong>
+                                </strong>
+                                <h3 style="color: rgb(250, 246, 246);">Be Safe Be Informed</h3>
+                                </strong>
+
+                            </div>
+
+                        </div>
+                        <ol class="carousel-indicators " style="color: black;">
+                            <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#mycarousel" data-slide-to="1"></li>
+                            <li data-target="#mycarousel" data-slide-to="2"></li>
+                        </ol>
+                        <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="col-12 col-sm-12 col-md-5 offset-md-1 p-5 my-5">
+                
+                <h1 class="ml7 py-2">
+                    <span class="text-wrapper">
+                        <span class="letters">Stay Home Stay Safe</span>
+                    </span>
+                </h1>
+                <h1 class="ml8 py-2">
+                    <span class="text-wrapper">
+                        <span class="letters">#LetsFightTogether.</span>
+                    </span>
+                </h1>
+                <br>
+
+                <h1 class="ml10 py-2">
+                    <span class="text-wrapper">
+                        <span class="letters">Be Alert Be Smart.</span>
+                    </span>
+                </h1>
+
+                <h1 class="ml9 py-2">
+                    <span class="text-wrapper">
+                        <span class="letters">Be Safe Be Informed.</span>
+                    </span>
+                </h1> 
+
+            </div>-->
+        </div>
+    </div>
+
+    <div id="stats" class="p-0 bg-light">
+        <div class="row p-0">
+            <div class="col-12 col-sm-12 col-md-12 text-center py-5 my-3">
+
+                <h1><img src="corona.png" alt="Corona" class="img-fluid"> Coronavirus Live</h1>
+                <hr>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-6" id="card-div">
+                <div class="card text-center shadow-lg bg-light ">
+                    <div class="card-header">
+                        <h2 class="card-title ">GLOBAL</h2>
+                    </div>
+                    <div class="card-body bg-light">
+                        <div class="table-responsive p-0 m-0">
+                            <table class="table table-striped p-0 m-0">
+                                <thead>
+                                    <tr>
+
+                                        <th scope="col">Total Cases</th>
+                                        <th scope="col">Recovered Cases</th>
+                                        <th scope="col">Total Deaths</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+
+                                        <td id="total-cases"></td>
+                                        <td id="recovered"></td>
+                                        <td id="deaths"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                    <div class="card-footer text-muted">
+                        <canvas id="chartD2" width="400" height="400" style="margin-top: 30px;height: 300px;"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6" id="card-div">
+                <div class="card text-center shadow-lg bg-light ">
+                    <div class="card-header">
+                        <h2 class="card-title ">INDIA</h2>
+                    </div>
+                    <div class="card-body bg-light">
+                        <div class="table-responsive p-0 m-0">
+                            <table class="table table-striped p-0 m-0">
+                                <thead>
+                                    <tr>
+
+                                        <th scope="col">Total Cases</th>
+                                        <th scope="col">Recovered Cases</th>
+                                        <th scope="col">Total Deaths</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+
+                                        <td id="total-cases-india"></td>
+                                        <td id="recovered-india"></td>
+                                        <td id="deaths-india"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                    <div class="card-footer text-muted">
+                        <canvas id="chartD1" width="400" height="400" style="margin-top: 30px;height: 300px;"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-12 my-5 text-center">
+                <h2>Statewise Status</h2>
+            </div>
+            <div class=" col-12 col-sm-12 col-md-12 table-responsive">
+                <tabel id="showtable" class="table ">
+                    </table>
+
+            </div>
+
+
+
+            <div class="col-10 offset-1 col-sm-10 col-md-10   my-5" id="div-graph">
+                <!-- World chart Here in this div -->
+                <div id="chartglobal" class="table-responsive text-center">
+                    <h2 style="font-family: 'Indie Flower', cursive;
+                    font-family: 'Arvo', serif;">WORLD</h2><small>(till May 4)</small>
+                    <canvas id="chart" style="margin-top: 20px;height: 400px;width: 600px;"></canvas>
+                    <br>
+                    <hr>
+                </div>
+            </div>
+            <div class="col-10 offset-1 col-sm-10 col-md-10  my-5" id="div-graph2">
+                <!-- India Chart Here In This div -->
+                <div id="chartindia" class="table-responsive text-center">
+                    <h2 id="chart2_text" style="font-family: 'Indie Flower', cursive;
+                    font-family: 'Arvo', serif;">INDIA</h2><small id="chart2_texts">(till May 4)</small>
+                    <canvas id="chart2" style="margin-top: 30px; height: 400px;width: 600px;"></canvas>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12">
+                <p id="updatetime" style="color: black;"></p>
+                <p style="color: black;"></p>
+                <h1 style="color: orangered;" id="err"></h1>
+                <h1 style="color: orangered;" id="err2"></h1>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="symptoms" class="p-0 bg-light">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 text-center py-5 my-5">
+                <hr>
+                <h1>Major Symptoms</h1>
+                <hr>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-6 p-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Common Symptoms</h2>
+                        <hr>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="./anime/fever.gif" alt="Fever" class="img-fluid" id="anime">
+                    </div>
+                    <div class="col-md-6">
+                        <h3><strong>Fever</strong></h3>
+                        <hr>
+                        <br>
+                        <p>
+                            Fever is one of the common symptoms of COVID-19.
+                            We have observed that many of the patients show
+                            this symptom but also some patients are COVID-19
+                            positive even when they don't show any symptoms.
+                        </p>
+
+                    </div>
+
+                    <div class="col-md-6">
+                        <img src="./anime/tired.gif" alt="Tired" class="img-fluid" id="anime">
+                    </div>
+                    <div class="col-md-6">
+                        <h3><strong>Tiredness</strong></h3>
+                        <hr>
+                        <br>
+                        <p>
+                            Tiredness is also one of the common symptoms of
+                            COVID-19.Patients feels tired , but also some patients
+                            are COVID-19 positive even if no symptoms are shown.
+                            The immunity power is more important during the
+                            treatment of this viral disease.
+                        </p>
+
+                    </div>
+
+                    <div class="col-md-6">
+                        <img src="./anime/dry cough.gif" alt="DryCough" class="img-fluid" id="anime">
+                    </div>
+                    <div class="col-md-6">
+                        <h3><strong>Dry Cough</strong></h3>
+                        <hr>
+                        <br>
+                        <p>
+                            COVID-19 virus attacks on the respiratory path.
+                            Many patients showed up with symptoms of dry
+                            cough and others like fever , tiredness.
+                            People having dry cough and the other similar
+                            symptoms may tests positive for Covid19
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-6 p-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Some people may experience:</h2>
+                        <hr>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="./anime/virus.gif" alt="Virus" class="img-fluid" id="anime">
+                    </div>
+                    <div class="col-md-6">
+                        <h4><strong>aches and pains</strong></h4>
+                        <hr>
+                        <br>
+                        <h4><strong>runny nose</strong></h4>
+                        <hr>
+                        <br>
+                        <h4><strong>sore throat</strong></h4>
+                        <hr>
+                        <br>
+                        <h4><strong>diarrhoea</strong></h4>
+                        <hr>
+                        <br>
+                        <h4><strong>nasal congestion</strong></h4>
+                        <hr>
+                        <br>
+
+                    </div>
+
+                    <div class="col-md-12">
+                        <hr>
+                        <h3><strong>On average it takes 5–6 days from when someone is infected with the virus for
+                                symptoms to show, however it can take up to 14 days.</strong></h3>
+                        <hr>
+                        <br>
+                        <br>
+                        <h3><strong>People with mild symptoms who are otherwise healthy should self-isolate. Seek
+                                medical attention if you have a fever, a cough, and difficulty breathing. Call ahead
+                            </strong></h3>
+                        <hr>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="preventions" class="p-0 bg-light">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 py-5 text-center">
+                <hr>
+                <h1>Prevention Measures</h1>
+                <hr>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 p-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Fundamental Preventions</h2>
+                        <hr>
+                    </div>
+                    <div class="col-md-6 my-3">
+                        <img src="./anime/stayHome.gif" alt="stayHome" class="img-fluid" id="anime">
+                    </div>
+                    <div class="col-md-6 my-3">
+                        <h3><strong>Stay Home</strong></h3>
+                        <hr>
+                        <br>
+                        <p>
+                            Stay home if you feel unwell.
+                            Stay safe at home , don't go out unless
+                            it is really importanat.Even if you have
+                            to go out , take all the necessary precations.
+                        </p>
+
+                    </div>
+
+                    <div class="col-md-6 my-3">
+                        <img src="./anime/distance.gif" alt="Distance" class="img-fluid" id="anime">
+                    </div>
+                    <div class="col-md-6 my-3">
+                        <h3><strong>Keep a Safe Distance</strong></h3>
+                        <hr>
+                        <br>
+                        <p>
+                            Maintain a safe distance from anyone who
+                            is coughing or sneezing.Follow the all rules
+                            of social distancing provided by Gov. while
+                            going outside for any reasons.
+                        </p>
+
+                    </div>
+                    <div class="col-md-6 my-3">
+                        <img src="./anime/washHands.gif" alt="Wash Hands" class="img-fluid" id="anime">
+                    </div>
+                    <div class="col-md-6 my-3">
+                        <h3><strong>Wash Hands Often</strong></h3>
+                        <hr>
+                        <br>
+                        <p>
+                            Clean your hands often. Use soap and water,
+                            or an alcohol-based hand rub for cleaning.
+                            Don’t touch your eyes, nose or mouth.
+                        </p>
+
+                    </div>
+
+
+                    <div class="col-md-6 rounded my-3">
+                        <img src="./anime/cover.gif" alt="Cover" class="img-fluid" id="anime">
+                    </div>
+                    <div class="col-md-6 my-3">
+                        <h3><strong>Cover Your Cough</strong></h3>
+                        <hr>
+                        <br>
+                        <p>
+                            Cover your nose and mouth with your bent elbow
+                            or a tissue when you cough or sneeze.Tell others
+                            to do same.
+
+                        </p>
+
+                    </div>
+
+                    <div class="col-md-6 my-3">
+                        <img src="./anime/helpline.gif" alt="Helpline" class="img-fluid" id="anime">
+                    </div>
+                    <div class="col-md-6 my-3">
+                        <h3><strong>Sick ? Call the <a href="#helplines">Helpline</a></strong></h3>
+                        <hr>
+                        <br>
+                        <p>
+                            If you have a fever, a cough, and difficulty
+                            breathing, seek medical attention. Call in advance.
+                            Follow the directions of your local health authority.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-6 p-5">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <h2>Things you should Do</h2>
+                        <hr>
+                    </div>
+                    <div class="col-md-12 my-3 text-center">
+                        <img src="./anime/phone.gif" alt="Phone" class="img-fluid" id="anime" style="height: 350px;">
+                        <br>
+                        <h2><strong>Clean your phone</strong></h2>
+                        <hr>
+                    </div>
+                    <div class="col-md-12 my-3 text-center">
+                        <img src="./anime/mask.gif" alt="Mask" class="img-fluid" id="anime" style="height: 350px;">
+                        <br>
+                        <h2><strong>Use Masks as per need</strong></h2>
+                        <hr>
+                    </div>
+                    <div class="col-md-12 my-3 text-center">
+                        <img src="./anime/hobby.gif" alt="Hobby" class="img-fluid" id="anime" style="height: 350px;">
+                        <br>
+                        <h2><strong>Cultivate Hobbies</strong></h2>
+                        <hr>
+                    </div>
+                    <div class="col-md-12 my-3 text-center">
+                        <img src="./anime/learn.gif" alt="Learn" class="img-fluid" id="anime" style="height: 350px;">
+                        <br>
+                        <h2><strong>Learn New Things</strong></h2>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="helplines" class="p-0" style="background-color: rgb(231, 231, 231); ">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 text-center my-5">
+                <img src="plus.png" alt="+" class="p-1" style="height: 50px;width: 50px;">
+                <h1>Helplines</h1>
+                <hr>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6  ">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h2> <strong> Contact Numbers </strong></h2>
+                        <hr>
+                    </div>
+                    <div class="col-6 text-center">
+                        <h5>
+                            <p>Central Helpline</p>
+                        </h5>
+
+                        <h5><a href="tel:+91-11-23978046">+91-11-23978046</a></h5>
+                    </div>
+
+                    <div class="col-6 text-center">
+                        <h5>
+                            <p>Maharashtra Helpline</p>
+                        </h5>
+                        <h5><a href="tel:020-26127394">020-26127394</a></h5>
+                    </div>
+                    <div class="col-6 text-center my-2">
+                        <h5>
+                            <p>Ambulance</p>
+                        </h5>
+                        <h5><a href="tel:102">102</a></h5>
+                    </div>
+                    <div class="col-6 text-center my-2">
+                        <h5>
+                            <p>Police</p>
+                        </h5>
+                        <h5><a href="tel:100">100</a></h5>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-6 ">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h3> <strong> Quick Links </strong></h3>
+                        <hr>
+                    </div>
+                    <div class="col-6 text-center">
+                        <br>
+                        <h5><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">
+                                <p>WHO</p>
+                            </a></h5>
+                    </div>
+
+                    <div class="col-6 text-center">
+                        <br>
+                        <h5><a href="https://www.mygov.in/covid-19">
+                                <p>Covid-19 Government of India</p>
+                            </a></h5>
+                    </div>
+                    <div class="col-6 text-center my-2">
+                        <br>
+                        <h5><a
+                                href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub/q-a-detail/q-a-coronaviruses">
+                                <p>Your
+                                    Questions Answered</p>
+                            </a>
+                        </h5>
+                    </div>
+                    <div class="col-6 text-center my-2">
+                        <br>
+                        <h5><a href="https://www.covidvisualizer.com/">
+                                <p>Covid-19 Visualizer</p>
+                            </a></h5>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-12 my-5">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <br>
+                        <h3> <strong></strong> Social Hub (GOI) </strong></h3>
+                        <hr>
+                    </div>
+                    <div class="col-4 col-sm-4 col-md-2 text-center">
+                        <br>
+                        <h5><a
+                                href="https://api.whatsapp.com/send?phone=919013353535&text=Hi&source=&data=&app_absent="><i
+                                    id="icon" class="fab fa-whatsapp p-3 rounded-circle"
+                                    title="Whatsapp Mygov."></i></a>
+                        </h5>
+
+                    </div>
+                    <div class="col-4 col-sm-4 col-md-2 text-center">
+                        <br>
+                        <h5><a href="https://www.facebook.com/MyGovIndia/"><i class="fab fa-facebook p-3 rounded-circle"
+                                    id="icon" title="Facebook Mygov."></i></a>
+                        </h5>
+                    </div>
+                    <div class="col-4 col-sm-4 col-md-2  text-center">
+                        <br>
+                        <h5><a href="https://www.messenger.com/t/MyGovIndia">
+
+                                <i class='fab fa-facebook-messenger p-3 rounded-circle' id="icon"
+                                    title="Messenger Mygov."></i>
+                            </a>
+                        </h5>
+
+                    </div>
+                    <div class="col-4 col-sm-4 col-md-2 text-center">
+                        <br>
+                        <h5><a href="https://www.instagram.com/mygovindia/"><i
+                                    class="fab fa-instagram p-3 rounded-circle" id="icon"
+                                    title="Instagram Mygov."></i></a>
+                        </h5>
+                    </div>
+                    <div class="col-4 col-sm-4 col-md-2 text-center">
+                        <br>
+                        <h5><a href="https://t.me/MyGovCoronaNewsdesk"><i class="fab fa-telegram p-3 rounded-circle"
+                                    id="icon" title="Telegram Mygov."></i></a>
+                        </h5>
+                    </div>
+                    <div class=" col-4 col-sm-4 col-md-2 text-center">
+                        <br>
+                        <h5><a href="https://twitter.com/mygovindia"><i class="fab fa-twitter p-3 rounded-circle"
+                                    id="icon" title="Twitter Mygov."></i></a>
+                        </h5>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 text-center">
+                        <h3 style="font-family: 'Indie Flower', cursive;
+                    font-family: 'Arvo', serif;margin-top: 25px;">Made with care<i class="fas fa-heart"></i></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="index.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="app1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
