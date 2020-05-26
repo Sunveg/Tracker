@@ -258,7 +258,7 @@ function DoughnutChartg() {
             data: {
                 labels: ['Total confirmed', 'Recovered', 'Deaths'],
                 datasets: [{
-                    label: 'Till 4 May',
+                    label: 'Status',
                     data: [datag.cases, datag.recovered, datag.deaths],
                     backgroundColor: [
                         '#87CEEB',
